@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "164383136747",
+    "firebase_url": "https://apk123-5a085-default-rtdb.firebaseio.com",
+    "project_id": "apk123-5a085",
+    "storage_bucket": "apk123-5a085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164383136747:android:572b082be136b2ec4317ae",
+        "android_client_info": {
+          "package_name": "com.example.aplikasimonitoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOS4sVXDh_AalWa5EZNHN1co7vTpkpIDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164383136747:android:5c8bf0703489fbdc4317ae",
+        "android_client_info": {
+          "package_name": "com.example.aplikasipelaporan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOS4sVXDh_AalWa5EZNHN1co7vTpkpIDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

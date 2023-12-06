@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AplikasiPelaporan</string>
+    <string name="title_header">Laporkan pengaduan anda!</string>
+    <string name="text_header">Aplikasi pengaduan masyarakat untuk kenyamanan masyarakat</string>
+    <string name="channel_name">Messaging</string>
+    <string name="channel_description">To chat via notifications using this app</string>
+</resources>
