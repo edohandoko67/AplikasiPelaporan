@@ -23,24 +23,37 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="70dp"
-                android:text="Selamat Datang"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="70dp"
+                    android:text="Selamat Datang"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="70dp"
+                    android:text="user"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <ImageView
-                android:id="@+id/ivUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="25dp"
-                android:src="@drawable/user" />
+            android:id="@+id/imgOutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/baseline_power_settings_new_24" />
         </LinearLayout>
 
         <TextView
@@ -138,7 +151,7 @@
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="10dp"
-                            android:text="Kami siap segera jalankan tugas! \nSiap Kerjakan"
+                            android:text="Kami siap segera \njalankan tugas!"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -279,102 +292,55 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/linearLayout3"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="150dp"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
-    <!--        app:layout_constraintVertical_bias="0.07999998">-->
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.07999998">
 
-    <!--        <androidx.cardview.widget.CardView-->
-    <!--            android:id="@+id/cardView4"-->
-    <!--            android:layout_width="170dp"-->
-    <!--            android:layout_height="109dp"-->
-    <!--            android:layout_marginStart="25dp"-->
-    <!--            app:cardCornerRadius="10dp"-->
-    <!--            app:cardElevation="10dp"-->
-    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintHorizontal_bias="0.0"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="@+id/linearLayout"-->
-    <!--            app:layout_constraintVertical_bias="0.655">-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="170dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="25dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.655">
 
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgDatabase"-->
-    <!--                android:layout_width="150dp"-->
-    <!--                android:layout_height="60dp"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:layout_marginTop="-15dp"-->
-    <!--                android:src="@drawable/show" />-->
+                <ImageView
+                    android:id="@+id/imgSendLaporan"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-15dp"
+                    android:src="@drawable/notification" />
 
-    <!--            <TextView-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:layout_marginTop="25dp"-->
-    <!--                android:text="Ubah Data Rute"-->
-    <!--                android:textSize="14sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:text="Lapor untuk status"
+                    android:textSize="14sp" />
 
-    <!--            <ImageView-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:layout_marginTop="40dp"-->
-    <!--                android:src="@drawable/line" />-->
-
-    <!--            <Spinner-->
-    <!--                android:id="@+id/spinnerOptions"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center_vertical"-->
-    <!--                android:layout_marginStart="0dp"-->
-    <!--                android:spinnerMode="dropdown" />-->
-    <!--        </androidx.cardview.widget.CardView>-->
-
-    <!--        <androidx.cardview.widget.CardView-->
-    <!--            android:id="@+id/cardView5"-->
-    <!--            android:layout_width="170dp"-->
-    <!--            android:layout_height="109dp"-->
-    <!--            android:layout_marginStart="25dp"-->
-    <!--            app:cardCornerRadius="10dp"-->
-    <!--            app:cardElevation="10dp"-->
-    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintHorizontal_bias="0.0"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="@+id/linearLayout"-->
-    <!--            app:layout_constraintVertical_bias="0.655">-->
-
-    <!--            <TextView-->
-    <!--                android:id="@+id/tvSize"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:text=" kg"-->
-    <!--                android:textSize="22sp" />-->
-
-    <!--            <TextView-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:layout_marginTop="25dp"-->
-    <!--                android:text="Total Kapasitas per Minggu"-->
-    <!--                android:textAlignment="center"-->
-    <!--                android:textSize="13sp" />-->
-
-    <!--            <ImageView-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="center"-->
-    <!--                android:layout_marginTop="40dp"-->
-    <!--                android:src="@drawable/line" />-->
-    <!--        </androidx.cardview.widget.CardView>-->
-    <!--    </LinearLayout>-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/line" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
     <!--    <LinearLayout-->
     <!--        android:id="@+id/linearLayout5"-->

@@ -44,14 +44,14 @@ public class SendNotification extends AppCompatActivity {
         binding.signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AuthUI.getInstance().signOut(SendNotification.this).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task<Void> task) {
-                        startActivity(new Intent(SendNotification.this, FirebaseAuthUIActivity.class));
-                        finish();
-                        FirebaseMessaging.getInstance().unsubscribeFromTopic("messaging");
-                    }
-                });
+//                AuthUI.getInstance().signOut(SendNotification.this).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull @NotNull Task<Void> task) {
+//                        startActivity(new Intent(SendNotification.this, FirebaseAuthUIActivity.class));
+//                        finish();
+//                        FirebaseMessaging.getInstance().unsubscribeFromTopic("messaging");
+//                    }
+//                });
             }
         });
         binding.send_notif.setOnClickListener(new View.OnClickListener() {

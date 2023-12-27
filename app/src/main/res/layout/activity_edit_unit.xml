@@ -5,51 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.EditActivity">
+    tools:context=".Unit.EditActivityUnit">
 
     <EditText
-        android:id="@+id/etTanggalMasuk"
+        android:id="@+id/etUpdateNameUnit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:focusable="false"
-        android:hint="Tanggal masuk"
+        android:hint="Update Nama Pelapor"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="50dp" />
     <EditText
-        android:id="@+id/etTanggalUpdate"
+        android:id="@+id/etUpdateLaporanUnit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:hint="Update Tanggal"/>
+        android:hint="Update Laporan"/>
     <EditText
-        android:id="@+id/etUpdateHasil"
+        android:id="@+id/etUpdateDateUnit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:hint="Update hasil"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:text="Ubah status"/>
-
-    <Spinner
-        android:id="@+id/spinerStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/status_options"/>
+        android:hint="Tanggal tidak dapat diubah"/>
 
     <Button
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_editUnit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

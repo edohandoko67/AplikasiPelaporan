@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="status_options">
+        <item>OPEN</item>
+        <item>IN_PROGRESS</item>
+        <item>CLOSE</item>
+        <item>ON_HOLD</item>
+        <item>CANCEL</item>
+    </string-array>
+</resources>

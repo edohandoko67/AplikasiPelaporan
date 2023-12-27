@@ -1,4 +1,4 @@
-package com.example.aplikasipelaporan.ui;
+package com.example.aplikasipelaporan.Unit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ListUserActivity extends AppCompatActivity {
+public class ListUnitAct extends AppCompatActivity {
     private DatabaseReference databaseReference;
     RecyclerView recyclerView;
     ArrayList<Report> list;
@@ -29,37 +29,36 @@ public class ListUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_user);
+        setContentView(R.layout.activity_list_unit);
         FirebaseApp.initializeApp(this);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("reports");
         list = new ArrayList<>();
-        recyclerView = findViewById(R.id.recyclerViewUser);
+        recyclerView = findViewById(R.id.recyclerViewUnit);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new Adapter(this, list);
         recyclerView.setAdapter(adapter);
-        getDataUser();
+        getDataUnit();
     }
 
-    private void getDataUser() {
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                list.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Report report = dataSnapshot.getValue(Report.class);
-                    report.setKey(dataSnapshot.getKey());
-                    list.add(report);
-                }
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+    private void getDataUnit() {
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                list.clear();
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                    UnitModel unit = dataSnapshot.getValue(UnitModel.class);
+//                    unit.setKey(dataSnapshot.getKey());
+//                    list.add(unit);
+//                }
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
     }
-
 }

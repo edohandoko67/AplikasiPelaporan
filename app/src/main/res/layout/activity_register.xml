@@ -3,11 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".login.RegisterActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Color_5"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/close_btnRegister"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/button_close"
+            tools:ignore="ContentDescription,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +41,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="nama"
+            android:hint="Nama Lengkap"
             android:textColorHint="@color/Color_1"
             app:boxCornerRadiusBottomEnd="11dp"
             app:boxCornerRadiusBottomStart="11dp"
@@ -37,6 +57,110 @@
                 android:drawablePadding="7dp"
                 android:importantForAutofill="no"
                 android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/Color_1"
+                android:textSize="15sp"
+                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Alamat"
+            android:textColorHint="@color/Color_1"
+            android:layout_marginTop="17dp"
+            app:boxCornerRadiusBottomEnd="11dp"
+            app:boxCornerRadiusBottomStart="11dp"
+            app:boxCornerRadiusTopEnd="11dp"
+            app:boxCornerRadiusTopStart="11dp"
+            app:boxStrokeColor="@color/Color_1"
+            app:endIconMode="clear_text"
+            tools:ignore="HardcodedText">
+            <EditText
+                android:id="@+id/alamatReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="7dp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/Color_1"
+                android:textSize="15sp"
+                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Tanggal lahir"
+            android:textColorHint="@color/Color_1"
+            android:layout_marginTop="17dp"
+            app:boxCornerRadiusBottomEnd="11dp"
+            app:boxCornerRadiusBottomStart="11dp"
+            app:boxCornerRadiusTopEnd="11dp"
+            app:boxCornerRadiusTopStart="11dp"
+            app:boxStrokeColor="@color/Color_1"
+            app:endIconMode="clear_text"
+            tools:ignore="HardcodedText">
+            <EditText
+                android:id="@+id/tglReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="7dp"
+                android:focusable="false"
+                android:importantForAutofill="no"
+                android:maxLines="1"
+                android:textColor="@color/Color_1"
+                android:textSize="15sp"
+                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Pekerjaan"
+            android:textColorHint="@color/Color_1"
+            android:layout_marginTop="17dp"
+            app:boxCornerRadiusBottomEnd="11dp"
+            app:boxCornerRadiusBottomStart="11dp"
+            app:boxCornerRadiusTopEnd="11dp"
+            app:boxCornerRadiusTopStart="11dp"
+            app:boxStrokeColor="@color/Color_1"
+            app:endIconMode="clear_text"
+            tools:ignore="HardcodedText">
+            <EditText
+                android:id="@+id/pekerjaanReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="7dp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/Color_1"
+                android:textSize="15sp"
+                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nomor HP yang dapat dihubungi"
+            android:textColorHint="@color/Color_1"
+            android:layout_marginTop="17dp"
+            app:boxCornerRadiusBottomEnd="11dp"
+            app:boxCornerRadiusBottomStart="11dp"
+            app:boxCornerRadiusTopEnd="11dp"
+            app:boxCornerRadiusTopStart="11dp"
+            app:boxStrokeColor="@color/Color_1"
+            app:endIconMode="clear_text"
+            tools:ignore="HardcodedText">
+            <EditText
+                android:id="@+id/nomorReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="7dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textColor="@color/Color_1"
                 android:textSize="15sp"

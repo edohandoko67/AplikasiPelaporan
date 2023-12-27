@@ -2,7 +2,6 @@ package com.example.aplikasipelaporan.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,12 +41,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Report report = list.get(position);
-        holder.tvLaporan.setText(report.getLaporan());
-        holder.tvName.setText(report.getName());
+        holder.tvHasil.setText(report.getHasil());
+        holder.tvEtdate.setText(report.getTanggalMasuk());
+        holder.tvDate.setText(report.getTanggalUpdate());
+        holder.tvLap.setText(report.getLaporan());
+        holder.tvStatus.setText(report.getStatus());
         holder.btnEdit.setOnClickListener(view -> {
             Intent intent = new Intent(context, EditActivity.class);
-            intent.putExtra("name", report.getName());
-            intent.putExtra("laporan", report.getLaporan());
+            //intent.putExtra("name", report.getName());
+            intent.putExtra("hasil", report.getHasil());
+            intent.putExtra("tanggalMasuk", report.getTanggalMasuk());
+            intent.putExtra("tanggalUpdate", report.getTanggalUpdate());
+            intent.putExtra("status", report.getStatus());
             intent.putExtra("Key", report.getKey());
             context.startActivity(intent);
         });
@@ -64,12 +69,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tvLaporan, tvName;
+        TextView tvHasil, tvDate, tvEtdate, tvStatus, tvLap;
         ImageView btnEdit, btnDelete;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvLaporan = itemView.findViewById(R.id.tv_laporan_user);
-            tvName = itemView.findViewById(R.id.tv_name);
+            tvHasil = itemView.findViewById(R.id.tv_hasil_user);
+            tvLap = itemView.findViewById(R.id.tv_lp_user);
+            tvEtdate = itemView.findViewById(R.id.tv_etdate_user);
+            tvDate = itemView.findViewById(R.id.tv_etdate_update);
+            tvStatus = itemView.findViewById(R.id.tv_status_user);
             btnEdit = itemView.findViewById(R.id.btn_update_user);
             btnDelete = itemView.findViewById(R.id.btn_delete_user);
         }

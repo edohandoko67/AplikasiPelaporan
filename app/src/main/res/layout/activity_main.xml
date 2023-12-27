@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/Color_5"
     tools:context=".MainActivity">
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/close_btn"
+            android:id="@+id/close_btnUser"
             android:layout_width="30dp"
             android:layout_height="35dp"
             android:layout_marginStart="15dp"
@@ -38,77 +37,283 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="12dp"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Nama Pelapor"
-                android:textColorHint="@color/Color_1"
-                app:boxCornerRadiusBottomEnd="11dp"
-                app:boxCornerRadiusBottomStart="11dp"
-                app:boxCornerRadiusTopEnd="11dp"
-                app:boxCornerRadiusTopStart="11dp"
-                app:boxStrokeColor="@color/Color_1"
-                app:endIconMode="clear_text"
-                tools:ignore="HardcodedText">
-                <EditText
-                    android:id="@+id/nama_pelapor_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="7dp"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:textColor="@color/Color_1"
-                    android:textSize="15sp"
-                    tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="17dp"
-                android:hint="Laporan"
-                android:textColorHint="@color/Color_1"
-                app:boxCornerRadiusBottomEnd="11dp"
-                app:boxCornerRadiusBottomStart="11dp"
-                app:boxCornerRadiusTopEnd="11dp"
-                app:boxCornerRadiusTopStart="11dp"
-                app:boxStrokeColor="@color/Color_1"
-                app:endIconMode="clear_text"
-                tools:ignore="HardcodedText">
-                <EditText
-                    android:id="@+id/laporan_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="7dp"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:textColor="@color/Color_1"
-                    android:textSize="15sp"
-                    tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btn_create_laporan"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
-                android:text="Simpan Data"
-                android:textColor="@color/Color_2"
-                tools:ignore="HardcodedText" />
-        </LinearLayout>
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="1. Apakah Anda mengalami kekerasan?"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <RadioButton
+                        android:id="@+id/radioButtonYes1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNo1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="2. Kekerasan tersebut dialami oleh siapa?"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonIbu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ibu"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnak"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anak" />
+                    <RadioButton
+                        android:id="@+id/radioButtonAnakIbu"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anak, Ibu" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="3. Tuliskan kekerasan yang Anda alami"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Tuliskan kekerasan yang Anda alami"
+                    android:textColorHint="@color/Color_1"
+                    android:layout_marginTop="5dp"
+                    app:boxCornerRadiusBottomEnd="11dp"
+                    app:boxCornerRadiusBottomStart="11dp"
+                    app:boxCornerRadiusTopEnd="11dp"
+                    app:boxCornerRadiusTopStart="11dp"
+                    app:boxStrokeColor="@color/Color_1"
+                    app:endIconMode="clear_text"
+                    tools:ignore="HardcodedText">
+                    <EditText
+                        android:id="@+id/et_kekerasan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="7dp"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/Color_1"
+                        android:textSize="15sp"
+                        tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="4. Kapan kekerasan ini Anda alami"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Tuliskan kapan kekerasan yang Anda alami"
+                    android:textColorHint="@color/Color_1"
+                    android:layout_marginTop="5dp"
+                    app:boxCornerRadiusBottomEnd="11dp"
+                    app:boxCornerRadiusBottomStart="11dp"
+                    app:boxCornerRadiusTopEnd="11dp"
+                    app:boxCornerRadiusTopStart="11dp"
+                    app:boxStrokeColor="@color/Color_1"
+                    app:endIconMode="clear_text"
+                    tools:ignore="HardcodedText">
+                    <EditText
+                        android:id="@+id/et_kapan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="7dp"
+                        android:importantForAutofill="no"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:textColor="@color/Color_1"
+                        android:textSize="15sp"
+                        tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="5. Reaksi apa yang Anda lakukan terhadap kekerasan yang Anda alami"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Tuliskan reaksi yang Anda lakukan "
+                    android:textColorHint="@color/Color_1"
+                    android:layout_marginTop="5dp"
+                    app:boxCornerRadiusBottomEnd="11dp"
+                    app:boxCornerRadiusBottomStart="11dp"
+                    app:boxCornerRadiusTopEnd="11dp"
+                    app:boxCornerRadiusTopStart="11dp"
+                    app:boxStrokeColor="@color/Color_1"
+                    app:endIconMode="clear_text"
+                    tools:ignore="HardcodedText">
+                    <EditText
+                        android:id="@+id/et_tindakan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="7dp"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/Color_1"
+                        android:textSize="15sp"
+                        tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="6. Apakah orang-orang disekitar Anda atau keluarga Anda mengetahui hal tersebut?"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonYes2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNo2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+                </RadioGroup>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:text="7. Apakah sudah ada orang terdekat yang membantu Anda?"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonYes3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jika Ya, bantuan apa yang diberikan? "
+                        android:checked="true"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editTextBantuan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Silakan tulis bantuan yang Anda terima"
+                            android:inputType="text" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNo3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak" />
+                </RadioGroup>
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:hint="Send your notification"-->
+<!--                    android:textColorHint="@color/Color_1"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    app:boxCornerRadiusBottomEnd="11dp"-->
+<!--                    app:boxCornerRadiusBottomStart="11dp"-->
+<!--                    app:boxCornerRadiusTopEnd="11dp"-->
+<!--                    app:boxCornerRadiusTopStart="11dp"-->
+<!--                    app:boxStrokeColor="@color/Color_1"-->
+<!--                    app:endIconMode="clear_text"-->
+<!--                    tools:ignore="HardcodedText">-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_notif"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="7dp"-->
+<!--                        android:importantForAutofill="no"-->
+<!--                        android:inputType="text"-->
+<!--                        android:maxLines="1"-->
+<!--                        android:textColor="@color/Color_1"-->
+<!--                        android:textSize="15sp"-->
+<!--                        tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+                <Button
+                    android:id="@+id/btn_create_laporan"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Simpan Data"
+                    android:textColor="@color/Color_2"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

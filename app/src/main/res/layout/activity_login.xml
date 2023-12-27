@@ -9,104 +9,111 @@
     tools:context=".login.LoginActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        android:orientation="vertical"
-        tools:ignore="UselessParent">
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:background="@drawable/bg"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="email"
-            android:textColorHint="@color/Color_1"
-            app:boxCornerRadiusBottomEnd="11dp"
-            app:boxCornerRadiusBottomStart="11dp"
-            app:boxCornerRadiusTopEnd="11dp"
-            app:boxCornerRadiusTopStart="11dp"
-            app:boxStrokeColor="@color/Color_1"
-            app:endIconMode="clear_text"
-            tools:ignore="HardcodedText">
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="7dp"
-                android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:textColor="@color/Color_1"
-                android:textSize="15sp"
-                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="password"
-            android:textColorHint="@color/Color_1"
-            app:boxCornerRadiusBottomEnd="11dp"
-            app:boxCornerRadiusBottomStart="11dp"
-            app:boxCornerRadiusTopEnd="11dp"
-            app:boxCornerRadiusTopStart="11dp"
-            android:layout_marginTop="17dp"
-            app:boxStrokeColor="@color/Color_1"
-            app:endIconMode="clear_text"
-            tools:ignore="HardcodedText">
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="7dp"
-                android:importantForAutofill="no"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:textColor="@color/Color_1"
-                android:textSize="15sp"
-                tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
-<!--            <Switch-->
-<!--                android:id="@+id/active"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="Remember me"/>-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="end"
-                    android:text="Forgot password?"/>
-                <TextView
-                    android:id="@+id/tv_forgot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="click here?"/>
-            </LinearLayout>
-        </com.google.android.material.textfield.TextInputLayout>
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
-            android:text="Login"
-            android:textColor="@color/Color_2"
-            tools:ignore="HardcodedText" />
-        <Button
-            android:id="@+id/btn_reg"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:text="Register"
-            android:textColor="@color/Color_2"
-            tools:ignore="HardcodedText" />
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="email"
+                android:textColorHint="@color/Color_1"
+                app:boxCornerRadiusBottomEnd="11dp"
+                app:boxCornerRadiusBottomStart="11dp"
+                app:boxCornerRadiusTopEnd="11dp"
+                app:boxCornerRadiusTopStart="11dp"
+                app:boxStrokeColor="@color/Color_1"
+                app:endIconMode="clear_text"
+                tools:ignore="HardcodedText">
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="7dp"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/Color_1"
+                    android:textSize="15sp"
+                    tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="password"
+                android:textColorHint="@color/Color_1"
+                app:boxCornerRadiusBottomEnd="11dp"
+                app:boxCornerRadiusBottomStart="11dp"
+                app:boxCornerRadiusTopEnd="11dp"
+                app:boxCornerRadiusTopStart="11dp"
+                android:layout_marginTop="17dp"
+                app:boxStrokeColor="@color/Color_1"
+                app:endIconMode="clear_text"
+                tools:ignore="HardcodedText">
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="7dp"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/Color_1"
+                    android:textSize="15sp"
+                    tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+                <!--            <Switch-->
+                <!--                android:id="@+id/active"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:text="Remember me"/>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="end"
+                        android:text="Forgot password?"/>
+                    <TextView
+                        android:id="@+id/tv_forgot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="click here?"/>
+                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:text="Login"
+                android:textColor="@color/Color_2"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:text="Register"
+                android:textColor="@color/Color_2"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

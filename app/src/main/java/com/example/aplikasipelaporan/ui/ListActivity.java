@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.aplikasipelaporan.R;
 import com.example.aplikasipelaporan.adapter.MyAdapter;
@@ -24,12 +27,18 @@ public class ListActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Report> list;
     MyAdapter adapter;
+    ImageButton close_btnAdmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         FirebaseApp.initializeApp(this);
         databaseReference = FirebaseDatabase.getInstance().getReference("reports");
+        close_btnAdmin = findViewById(R.id.close_btnAdmin);
+        close_btnAdmin.setOnClickListener(view -> {
+            startActivity(new Intent(this, DashboardActivity.class));
+            finish();
+        });
         list = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -58,4 +67,14 @@ public class ListActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void handleBackPressed() {
+        onBackPressed();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 }
