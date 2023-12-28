@@ -170,7 +170,6 @@
                         android:layout_height="wrap_content"
                         android:drawablePadding="7dp"
                         android:importantForAutofill="no"
-                        android:inputType="none"
                         android:maxLines="1"
                         android:textColor="@color/Color_1"
                         android:textSize="15sp"
