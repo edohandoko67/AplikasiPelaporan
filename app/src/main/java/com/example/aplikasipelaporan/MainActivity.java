@@ -10,11 +10,14 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.aplikasipelaporan.Notif.ApiUtils;
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         etKekerasan = findViewById(R.id.et_kekerasan);
         etReaksi = findViewById(R.id.et_tindakan);
         tanggal = findViewById(R.id.et_kapan);
-        etIya = findViewById(R.id.editTextBantuan);
+        etIya = findViewById(R.id.et_bantuan);
         radioButtonYes1 = findViewById(R.id.radioButtonYes1);
         radioButtonNo1 = findViewById(R.id.radioButtonNo1);
         RBAnak = findViewById(R.id.radioButtonIbu);
@@ -72,6 +75,21 @@ public class MainActivity extends AppCompatActivity {
         RBno6 = findViewById(R.id.radioButtonNo2);
         RByes7 = findViewById(R.id.radioButtonYes3);
         RBno7 = findViewById(R.id.radioButtonNo3);
+
+        RByes7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Cek apakah RadioButton 'No' yang dipilih
+                if (isChecked) {
+                    // Tampilkan TextField
+                    etIya.setVisibility(View.VISIBLE);
+                } else {
+                    // Sembunyikan TextField
+                    etIya.setVisibility(View.GONE);
+                }
+            }
+        });
+
         tanggal.setOnClickListener(view -> {
             showDatePickerDialog();
         });

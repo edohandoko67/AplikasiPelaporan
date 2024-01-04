@@ -42,18 +42,15 @@ public class DashboardActivity extends AppCompatActivity {
         cardView2.setOnClickListener(view -> {
             Intent intent = new Intent(this, ListActivity.class);
             startActivity(intent);
-            finish();
         });
         cardView3.setOnClickListener(view -> {
             Intent intent = new Intent(this, NotifActivity.class);
             startActivity(intent);
-            finish();
         });
 
         cardView4.setOnClickListener(view -> {
             Intent intent = new Intent(this, ListActivityNotif.class);
             startActivity(intent);
-            finish();
         });
 
         if (sharedPref.getLoggedIn()){

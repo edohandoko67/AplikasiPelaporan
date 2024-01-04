@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.aplikasipelaporan.R;
 import com.example.aplikasipelaporan.adapter.Adapter;
@@ -57,9 +58,13 @@ public class ListUserActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(ListUserActivity.this, "Data not found", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

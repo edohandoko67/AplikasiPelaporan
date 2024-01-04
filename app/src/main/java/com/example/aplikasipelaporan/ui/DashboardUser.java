@@ -35,7 +35,6 @@ public class DashboardUser extends AppCompatActivity {
         imgSendLap = findViewById(R.id.imgSendLaporan);
         imgSendLap.setOnClickListener(view -> {
             startActivity(new Intent(DashboardUser.this, SendNotif.class));
-            finish();
         });
         imgOutUser = findViewById(R.id.imgOutUser);
         imgOutUser.setOnClickListener(view -> {
@@ -46,12 +45,10 @@ public class DashboardUser extends AppCompatActivity {
         cardView1.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            finish();
         });
         cardView2.setOnClickListener(view -> {
             Intent intent = new Intent(this, ListUserActivity.class);
             startActivity(intent);
-            finish();
         });
 
         if (sharedPref.getLoggedIn()){

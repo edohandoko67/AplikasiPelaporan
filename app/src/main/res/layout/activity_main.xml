@@ -242,6 +242,12 @@
                     android:layout_marginTop="5dp"
                     android:textSize="18sp"
                     android:text="7. Apakah sudah ada orang terdekat yang membantu Anda?"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
                 <RadioGroup
                     android:id="@+id/radioGroup4"
                     android:layout_width="wrap_content"
@@ -254,21 +260,6 @@
                         android:layout_height="wrap_content"
                         android:text="Jika Ya, bantuan apa yang diberikan? "
                         android:checked="true"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:visibility="gone">
-
-                        <EditText
-                            android:id="@+id/editTextBantuan"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="Silakan tulis bantuan yang Anda terima"
-                            android:inputType="text" />
-
-                    </LinearLayout>
 
                     <RadioButton
                         android:id="@+id/radioButtonNo3"
@@ -277,6 +268,34 @@
                         android:layout_height="wrap_content"
                         android:text="Tidak" />
                 </RadioGroup>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Tuliskan reaksi yang Anda lakukan "
+                        android:textColorHint="@color/Color_1"
+                        android:layout_marginTop="5dp"
+                        app:boxCornerRadiusBottomEnd="11dp"
+                        app:boxCornerRadiusBottomStart="11dp"
+                        app:boxCornerRadiusTopEnd="11dp"
+                        app:boxCornerRadiusTopStart="11dp"
+                        app:boxStrokeColor="@color/Color_1"
+                        app:endIconMode="clear_text"
+                        tools:ignore="HardcodedText">
+                        <EditText
+                            android:id="@+id/et_bantuan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="7dp"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/Color_1"
+                            android:textSize="15sp"
+                            tools:ignore="LabelFor,TextFields,SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
 <!--                <com.google.android.material.textfield.TextInputLayout-->
 <!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
 <!--                    android:layout_width="match_parent"-->
