@@ -171,8 +171,6 @@
                         android:text="Ayo mari kita menjaga kebersihan lingkungan, janganlah buang sampah sembarangan" />
                 </LinearLayout>
             </ViewFlipper>
-
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -203,48 +201,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.13999999">
-
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:id="@+id/cardView2"-->
-<!--            android:layout_width="170dp"-->
-<!--            android:layout_height="109dp"-->
-<!--            android:layout_marginStart="25dp"-->
-<!--            android:layout_marginTop="25dp"-->
-<!--            android:layout_marginBottom="25dp"-->
-<!--            app:cardCornerRadius="10dp"-->
-<!--            app:cardElevation="10dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/linearLayout"-->
-<!--            app:layout_constraintVertical_bias="0.655">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imgData"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="-15dp"-->
-<!--                android:src="@drawable/list" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="25dp"-->
-<!--                android:text="Masukkan Laporan"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textSize="14sp" />-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="40dp"-->
-<!--                android:src="@drawable/line" />-->
-<!--        </androidx.cardview.widget.CardView>-->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
@@ -324,6 +280,58 @@
                 android:layout_marginTop="40dp"
                 android:src="@drawable/line" />
         </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.6">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="170dp"
+            android:layout_height="109dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.655">
+
+            <ImageView
+                android:id="@+id/imgList"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-15dp"
+                android:src="@drawable/baseline_checklist_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:text="List Notification"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/line" />
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 <!--    <LinearLayout-->

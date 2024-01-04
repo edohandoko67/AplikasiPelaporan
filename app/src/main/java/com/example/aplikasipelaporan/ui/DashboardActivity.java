@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 public class DashboardActivity extends AppCompatActivity {
-    CardView cardView2, cardView3;
+    CardView cardView2, cardView3, cardView4;
     ImageView imgOut;
     private SharedPref sharedPref;
     TextView tv_user;
@@ -31,6 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
         sharedPref = new SharedPref(this);
         cardView2 = findViewById(R.id.cardView3);
         cardView3 = findViewById(R.id.cardView4);
+        cardView4 = findViewById(R.id.cardView5);
         tv_user = findViewById(R.id.tv_user);
         imgOut = findViewById(R.id.imgOut);
         imgOut.setOnClickListener(view -> {
@@ -45,6 +46,12 @@ public class DashboardActivity extends AppCompatActivity {
         });
         cardView3.setOnClickListener(view -> {
             Intent intent = new Intent(this, NotifActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        cardView4.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ListActivityNotif.class);
             startActivity(intent);
             finish();
         });
